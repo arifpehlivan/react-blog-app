@@ -1,7 +1,14 @@
 import { createRoot } from 'react-dom/client';
 import "./styles/main.scss"
 import AppRouter from './routers/AppRouter';
-import "./App.css"
+import "./App.css";
+import { createStore } from 'redux';
+
+const store = createStore((state = {count: 0}) => {
+    return state
+})
+
+console.log(store.getState());
 
 const container = document.getElementById('app');
 const root = createRoot(container);
